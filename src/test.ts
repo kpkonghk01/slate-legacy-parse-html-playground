@@ -122,3 +122,75 @@ const y = slateHtmlSerializer.deserialize(
   `<ul id="list"><li>Hello World</li></ul><ul id="list2"><li>Hello2 World <a href="https://google.com">some link</a></li></ul>`
 );
 console.log(JSON.stringify(y.toJSON(), null, 2));
+/**
+{
+  "object": "value",
+  "document": {
+    "object": "document",
+    "data": {},
+    "nodes": [
+      {
+        "object": "block",
+        "type": "bulleted-list",
+        "data": {},
+        "nodes": [
+          {
+            "object": "block",
+            "type": "list-item",
+            "data": {},
+            "nodes": [
+              {
+                "object": "block",
+                "type": "text",
+                "data": {
+                  "text": "Hello World"
+                },
+                "nodes": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "object": "block",
+        "type": "bulleted-list",
+        "data": {},
+        "nodes": [
+          {
+            "object": "block",
+            "type": "list-item",
+            "data": {},
+            "nodes": [
+              {
+                "object": "block",
+                "type": "text",
+                "data": {
+                  "text": "Hello2 World "
+                },
+                "nodes": []
+              },
+              {
+                "object": "inline",
+                "type": "link",
+                "data": {
+                  "href": "https://google.com"
+                },
+                "nodes": [
+                  {
+                    "object": "block",
+                    "type": "text",
+                    "data": {
+                      "text": "some link"
+                    },
+                    "nodes": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
+*/
